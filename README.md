@@ -3,7 +3,7 @@
 # This is a practise project
 
 The server side of the project has been done with Node.js.
-Currently there is no live site present for this project.
+Currently there is no live site available for this project.
 
 # used technology
 
