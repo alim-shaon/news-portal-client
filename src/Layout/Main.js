@@ -11,7 +11,7 @@ const Main = () => {
       <Header></Header>
       <div className="container">
         <div className="row gx-2 gy-4">
-          <div className="col col-12 col-md-2 d-lg-block">
+          <div className="col col-12 col-md-2 d-none d-lg-block">
             <LeftSideNav></LeftSideNav>
           </div>
           <div className="col col-12 col-md-7">
