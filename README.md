@@ -3,7 +3,6 @@
 # This is a practise project
 
 The server side of the project has been done with Node.js.
-Currently there is no live site available for this project.
 
 # used technology
 
@@ -13,3 +12,6 @@ Currently there is no live site available for this project.
 - Firebase
 - react hot toast
 - react icons
+
+- sercer https://news-portal-fyre-news-server.vercel.app/
+- client
