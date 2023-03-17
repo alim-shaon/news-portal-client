@@ -14,4 +14,4 @@ The server side of the project has been done with Node.js.
 - react icons
 
 - sercer https://news-portal-fyre-news-server.vercel.app/
-- client
+- client https://fyrestormnews.web.app/
