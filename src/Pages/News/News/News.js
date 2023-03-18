@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useSetTitle from "../../../hooks/useSetTitle";
 import "./News.css";
 
 const News = () => {
+  useSetTitle("News Details");
   const news = useLoaderData();
   const { category_id, title, author, details, image_url } = news;
   return (
