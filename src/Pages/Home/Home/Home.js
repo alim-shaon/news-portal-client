@@ -6,6 +6,7 @@ import "./Home.css";
 
 const Home = () => {
   useSetTitle("Home");
+  // console.log("Rendering MyComponent...");
   const allNews = useLoaderData();
   return (
     <div>

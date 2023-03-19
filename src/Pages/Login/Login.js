@@ -9,6 +9,7 @@ const Login = () => {
 
   const [error, setError] = useState("");
   const { userSignIn, setLoader } = useContext(AuthContext);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,19 +21,25 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
+    // console.log("step -1");
+
     userSignIn(email, password)
       .then((result) => {
+        // console.log("step -3");
         const user = result.user;
         if (user.emailVerified) {
+          // console.log("step -4");
+          // console.log("email verified", user.emailVerified);
+          // console.log(from);
           navigate(from, { replace: true });
+          setError("");
+          form.reset();
         } else {
           toast.error("Your Email is not verified please verify");
         }
-        setError("");
-        form.reset();
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setError(error.message);
       })
       .finally(() => {

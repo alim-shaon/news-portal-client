@@ -19,8 +19,8 @@ const RightSideNav = () => {
     const provider = new GoogleAuthProvider();
     googleSignIn(provider)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+        // console.log(user);
       })
       .then((error) => {
         console.log(error);

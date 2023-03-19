@@ -8,7 +8,8 @@ const Register = () => {
   useSetTitle("Register");
   const [error, setError] = useState("");
   const [accepted, setAccepted] = useState(false);
-  const { createUser, setNameAndPhoto, verifyEmail } = useContext(AuthContext);
+  const { createUser, setNameAndPhoto, verifyEmail, setLoader, logOut } =
+    useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleRegister = (event) => {
@@ -18,7 +19,7 @@ const Register = () => {
     const name = form.name.value;
     const photoUrl = form.photoUrl.value;
     const password = form.password.value;
-    console.log(email, password, name, photoUrl);
+    // console.log(email, password, name, photoUrl);
 
     createUser(email, password)
       .then((result) => {
@@ -30,10 +31,16 @@ const Register = () => {
         setError("");
         toast.success("Please Verify Your Email Address");
         navigate("/");
+        logOut()
+          .then(() => {})
+          .catch((error) => {});
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setError(error.message);
+      })
+      .finally(() => {
+        setLoader(false);
       });
   };
   const handleEmailVerification = () => {

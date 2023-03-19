@@ -8,8 +8,8 @@ const Profile = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name);
-    console.log(photoURLRef.current.value);
+    // console.log(name);
+    // console.log(photoURLRef.current.value);
   };
   const handleChanged = (event) => {
     setName(event.target.value);

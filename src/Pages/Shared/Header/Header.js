@@ -7,6 +7,7 @@ import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  // console.log("inside Header", user);
   const handleLOgout = () => {
     logOut()
       .then(() => {})
